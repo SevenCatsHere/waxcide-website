@@ -10,6 +10,7 @@ module.exports = {
 		'arrow-parens': [2, 'as-needed'],
 		'react/jsx-filename-extension': 0,
 		'react/jsx-indent': [2, 'tab'],
+		'react/jsx-indent-props': [2, 'tab'],
 	},
 	overrides: [
 		{

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/index.scss';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import HeroIntro from '../components/Home/HeroIntro';
