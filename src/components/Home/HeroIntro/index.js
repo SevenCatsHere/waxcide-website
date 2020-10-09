@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './HeroIntro.module.scss';
+import styles from './index.module.scss';
+import SocialRibbon from './SocialRibbon';
 
 function HeroIntro() {
 	return (
@@ -11,6 +12,7 @@ function HeroIntro() {
 					<Link className="big button w-button" to="/music">Check it out</Link>
 					<Link className="big button w-button" to="/tour">Watch us live</Link>
 				</div>
+				<SocialRibbon />
 			</div>
 		</section>
 	);
