@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import cn from 'classnames';
 import {
 	FaFacebook,
 	FaTwitter,
@@ -7,9 +9,9 @@ import {
 } from 'react-icons/fa';
 import styles from './SocialRibbon.module.scss';
 
-function SocialRibbon() {
+function SocialRibbon({ className }) {
 	return (
-		<nav className={styles.socialRibbon}>
+		<nav className={cn(styles.socialRibbon, className)}>
 			<ul>
 				<li>
 					<a
@@ -55,5 +57,8 @@ function SocialRibbon() {
 		</nav>
 	);
 }
+
+SocialRibbon.propTypes = { className: PropTypes.string };
+SocialRibbon.defaultProps = { className: null };
 
 export default SocialRibbon;
