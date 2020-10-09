@@ -9,8 +9,10 @@ function HeroIntro() {
 			<div className={styles.heroContainer}>
 				<h1 className="hero-heading">Waxcide</h1>
 				<div className={styles.headingButtons}>
-					<Link className="big button w-button" to="/music">Check it out</Link>
-					<Link className="big button w-button" to="/tour">Watch us live</Link>
+					<Link className="big button w-button" to="/waxcide">waxcide</Link>
+					<Link className="big button w-button" to="/dnsk">DNSK</Link>
+					<Link className="big button w-button" to="/wulfe">Wulfe</Link>
+					<Link className="big button w-button" to="/buffalo-fish">BuffaLOFIsh</Link>
 				</div>
 				<SocialRibbon className={styles.socialRibbon} />
 			</div>
