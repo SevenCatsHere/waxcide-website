@@ -1,5 +1,7 @@
 'use strict';
 
 module.exports = {
-	plugins: [],
+	plugins: [
+		'gatsby-plugin-react-helmet',
+	],
 };
