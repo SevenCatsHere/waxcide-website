@@ -1,0 +1,25 @@
+.closed,
+.gmt-notice {
+	font-style: italic;
+}
+
+.availability {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.05rem;
+
+	dt {
+		width: 40%;
+		text-align: right;
+		&::after {
+			content: ':';
+		}
+	}
+
+	dd {
+		width: 60%;
+		margin-left: 0;
+		padding-left: .6em;
+		text-align: left;
+	}
+}

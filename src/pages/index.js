@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/index.scss';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import HeroIntro from '../components/Home/HeroIntro';
 
-export default function Home() {
+function HomePage() {
 	return (
 		<>
 			<Head />
@@ -14,3 +13,5 @@ export default function Home() {
 		</>
 	);
 }
+
+export default HomePage;
