@@ -1,0 +1,37 @@
+[
+	{
+		"day": "Sunday",
+		"from": null,
+		"to": null
+	},
+	{
+		"day": "Monday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	},
+	{
+		"day": "Tuesday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	},
+	{
+		"day": "Wednesday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	},
+	{
+		"day": "Thursday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	},
+	{
+		"day": "Friday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	},
+	{
+		"day": "Saturday",
+		"from": "12:00AM",
+		"to": "12:00AM"
+	}
+]

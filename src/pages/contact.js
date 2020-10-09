@@ -1,9 +1,24 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 
-function ContactPage() {
+export const query = graphql`
+	query {
+		allContactHoursJson(filter: { sourceInstanceName: { eq: "data" } }) {
+			edges {
+				node {
+					to
+					from
+				}
+			}
+		}
+	}
+`;
+
+function ContactPage(props) {
+	console.log(props);
 	return (
 		<>
 			<Head>
