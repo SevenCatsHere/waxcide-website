@@ -3,12 +3,32 @@
 require('dotenv').config();
 const path = require('path');
 
+const name = 'Waxcide';
+const description = '';
+const url = 'https://waxcide.com/'
+
 module.exports = {
+	pathPrefix: '/',
+	siteMetadata: {
+		title: name,
+		description,
+		siteUrl: url,
+		author: name,
+	},
 	plugins: [
 		'gatsby-transformer-json',
 		'gatsby-transformer-sharp',
+		'gatsby-transformer-remark',
+		'gatsby-plugin-typescript',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'articles',
+				path: path.resolve('./articles'),
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

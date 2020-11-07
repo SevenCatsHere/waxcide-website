@@ -1,0 +1,21 @@
+{
+	"include": ["./src/**/*"],
+	"exclude": [],
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"jsx": "react",
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"noImplicitReturns": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"plugins": [
+			{ "name": "typescript-plugin-css-modules" }
+		]
+	}
+}
