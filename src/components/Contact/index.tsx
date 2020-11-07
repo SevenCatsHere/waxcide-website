@@ -13,18 +13,20 @@ export interface ContactHoursDay {
 
 interface Props {
 	availability: ContactHoursDay[];
+	contactInfoHtml: string;
 }
 
-const Contact: React.FC<Props> = ({ availability }) => (
+const Contact: React.FC<Props> = ({ availability, contactInfoHtml }) => (
 	<section className="section">
 		<div className="content-wrapper w-container">
 			<h1 className="page-title">Get in Touch</h1>
 			<div className="contact-row w-row">
 				<div className="w-col w-col-6">
 					<h2 className="contact-h3">Contact Information</h2>
-					<a className="contact-link" href="mailto:waxcidetechno@gmail.com">
-						waxcidetechno@gmail.com
-					</a>
+					<div
+						className={styles.contactInformation}
+						dangerouslySetInnerHTML={{ __html: contactInfoHtml }}
+					/>
 				</div>
 
 				<div className="w-col w-col-6">

@@ -1,3 +1,17 @@
+.contact-information {
+	display: inline-block;
+	margin-top: 5px;
+	color: #999;
+	transition: color .15s linear;
+	text-decoration: none;
+	&:hover {
+		color: #fff;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+}
+
 .closed,
 .gmt-notice {
 	font-style: italic;

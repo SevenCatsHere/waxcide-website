@@ -8,10 +8,13 @@ interface QueryResult {
 	allContactHoursJson: {
 		nodes: ContactHoursDay[];
 	};
+	markdownRemark: {
+		html: string;
+	};
 }
 
 const ContactPage: React.FC = () => {
-	const days: ContactHoursDay[] = useStaticQuery<QueryResult>(gql`
+	const queryResult = useStaticQuery<QueryResult>(gql`
 		query ContactUsPage {
 			allContactHoursJson(limit: 7) {
 				nodes {
@@ -21,8 +24,16 @@ const ContactPage: React.FC = () => {
 					to
 				}
 			}
+			markdownRemark(frontmatter: {
+				title: { eq: "Contact Information" }
+			}) {
+				html
+			}
 		}
-	`).allContactHoursJson.nodes;
+	`);
+
+	const days = queryResult.allContactHoursJson.nodes;
+	const contactInfo = queryResult.markdownRemark.html;
 
 	return (
 		<>
@@ -30,7 +41,7 @@ const ContactPage: React.FC = () => {
 				<body className="subpage-background" />
 			</Head>
 			<Layout>
-				<Contact availability={days} />
+				<Contact availability={days} contactInfo={contactInfo} />
 			</Layout>
 		</>
 	);

@@ -3,9 +3,11 @@ import styles from './Footer.module.scss';
 import SocialRibbon from '../SocialRibbon';
 
 const Footer: React.FC = () => (
-	<footer>
+	<footer className={styles.footer}>
 		<SocialRibbon className={styles.socialRibbon} />
-		&copy; 2020 &bull; Waxcide
+		<p className={styles.copyright}>
+			&copy; 2020 &bull; Waxcide
+		</p>
 	</footer>
 );
 

@@ -41,7 +41,6 @@ module.exports = {
 				'**/__mocks__/**',
 				'./loadershim.js',
 			],
-			parserOptions: { project: './tsconfig.json', sourceType: 'script'	},
 			env: {
 				browser: false,
 				node: true,
