@@ -4,7 +4,12 @@ declare module '*.module.scss' {
 }
 
 declare module '*.svg' {
-	const Component: React.FC;
+	interface Props {
+		className?: string;
+		width?: number;
+		height?: number;
+	}
+	const Component: React.FC<Props>;
 	export default Component;
 }
 

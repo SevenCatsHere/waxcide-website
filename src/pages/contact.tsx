@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
 	`);
 
 	const days = queryResult.allContactHoursJson.nodes;
-	const contactInfo = queryResult.markdownRemark.html;
+	const contactInfoHtml = queryResult.markdownRemark.html;
 
 	return (
 		<>
@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
 				<body className="subpage-background" />
 			</Head>
 			<Layout>
-				<Contact availability={days} contactInfo={contactInfo} />
+				<Contact availability={days} contactInfoHtml={contactInfoHtml} />
 			</Layout>
 		</>
 	);
