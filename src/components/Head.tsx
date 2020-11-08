@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Helmet from 'react-helmet';
 
 interface Props {
-	children: ReactNode;
+	children?: ReactNode;
 }
 
 const Head: React.FC<Props> = ({ children }) => (

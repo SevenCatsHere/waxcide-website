@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styles from './index.module.scss';
 import ContactForm from './Form';
+import Content from '../Content';
 
 type DayOfWeek = 'Sunday' | 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday';
 
@@ -23,10 +24,7 @@ const Contact: React.FC<Props> = ({ availability, contactInfoHtml }) => (
 			<div className="contact-row w-row">
 				<div className="w-col w-col-6">
 					<h2 className="contact-h3">Contact Information</h2>
-					<div
-						className={styles.contactInformation}
-						dangerouslySetInnerHTML={{ __html: contactInfoHtml }}
-					/>
+					<Content className={styles.contactInformation} html={contactInfoHtml} />
 				</div>
 
 				<div className="w-col w-col-6">
@@ -40,7 +38,7 @@ const Contact: React.FC<Props> = ({ availability, contactInfoHtml }) => (
 							.map(day => (
 								<Fragment key={day.id}>
 									<dt>{day.day}</dt>
-									<dd className={day.isClosed ? styles.closed : null}>
+									<dd className={day.isClosed ? styles.closed : undefined}>
 										{day.isClosed ? 'Closed' : (
 											<>{day.from} &ndash; {day.to}</>
 										)}
