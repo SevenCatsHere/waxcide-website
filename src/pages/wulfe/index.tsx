@@ -13,7 +13,7 @@ interface QueryResult {
 const CONTENT_QUERY = gql`
 	query WulfeIntro {
 		markdownRemark(frontmatter: {
-			title: { eq: "Wulfe Main" }
+			title: { eq: "Wulfe Main Content" }
 		}) {
 			html
 		}

@@ -1,5 +1,5 @@
 ---
-Title: "Wulfe Main"
+title: "Wulfe Main Content"
 ---
 
 # Thomas Wulfe

@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from './HeroIntro.module.scss';
 import WaxcideHeading from './WaxcideHeading.svg';
-import DnskLogo from '../logos/DnskLogo.svg';
-import BuffaloFishLogo from '../logos/BuffaloFishLogo.svg';
+import DnskLogo from '../logos/Dnsk.svg';
+import WulfeLogo from '../logos/Wulfe.svg';
+import BuffaloFishLogo from '../logos/BuffaloFish.svg';
 import SocialRibbon from '../SocialRibbon';
 
 const HeroIntro: React.FC = () => (
@@ -11,12 +12,14 @@ const HeroIntro: React.FC = () => (
 		<div className={styles.heroContainer}>
 			<WaxcideHeading className={styles.heading} />
 			<div className={styles.headingButtons}>
-				<Link to="/waxcide">waxcide</Link>
-				<Link to="/dnsk">
+				<Link to="/waxcide" title="Waxcide">waxcide</Link>
+				<Link to="/dnsk" title="DNSK">
 					<DnskLogo />
 				</Link>
-				<Link to="/wulfe">Wulfe</Link>
-				<Link to="/buffalo-fish">
+				<Link to="/wulfe" title="Wulfe">
+					<WulfeLogo />
+				</Link>
+				<Link to="/buffalo-fish" title="buffaLOFIsh">
 					<BuffaloFishLogo />
 				</Link>
 			</div>
