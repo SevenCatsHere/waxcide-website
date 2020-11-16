@@ -6,7 +6,19 @@ title: "DNSK Main Content"
 
 Existing for over 15 years now, a lover of electronic music with a penchant for designing and using analogue modular synthesisers and enjoying an eclectic range of music. Influenced by everyone from The Prodigy to Jeff Mills, as waxcide, I make music for minds needing Techno, House, Acid, Minimal, Dub Techno, Progressive Trance/House/Techno and more besides - and also sometimes beat tapes for rap/hiphop lovers or, any others who like chill downtempo breaks. I also occasionally make DJ mixes but mostly just for fun. I have shared my music with everyone and have made all my releases, of any sort, available for free.
 
-embed: https://hearthis.at/dnsk/delinquent-habits-meets-mr-oizo-dnsk-bootleg/
+<iframe
+	scrolling="no"
+	id="hearthis_at_track_4846235"
+	width="100%"
+	height="150"
+	src="https://app.hearthis.at/embed/4846235/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css="
+	frameborder="0"
+	allowtransparency
+>
+	<p>
+		Listen to <a href="https://hearthis.at/dnsk/delinquent-habits-meets-mr-oizo-dnsk-bootleg/" target="_blank">DNSK - Delinquent Habits Meets Mr Oizo (DNSK Bootleg)</a> <span>by</span><a href="https://hearthis.at/dnsk/" target="_blank" >DNSK</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a>
+	</p>
+</iframe>
 
 DNSK's creative output can, amongst other places listed, be found here:
 

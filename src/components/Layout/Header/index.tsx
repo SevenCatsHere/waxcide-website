@@ -9,10 +9,7 @@ const Header: React.FC = () => (
 		<div className="w-container">
 			<nav className={cn('nav-menu', 'w-nav-menu', styles.nav)}>
 				<ul>
-					<NavItem href="/band">Band</NavItem>
-					<NavItem href="/music">Music</NavItem>
-					<NavItem href="/tour">Tour</NavItem>
-					<NavItem href="/gallery">Gallery</NavItem>
+					<NavItem href="/">Home</NavItem>
 					<NavItem href="/contact">Contact</NavItem>
 				</ul>
 			</nav>

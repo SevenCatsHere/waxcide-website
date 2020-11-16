@@ -10,7 +10,7 @@ interface Props {
 
 const Content: React.FC<Props> = ({ className, html, variant }) => (
 	<section className="section">
-		<div className="content-wrapper w-container">
+		<div className={cn(styles.contentWrapper, 'content-wrapper', 'w-container')}>
 			<div
 				className={cn(variant === 'pageContent' ? styles.container : null, className)}
 				dangerouslySetInnerHTML={{ __html: html }}
