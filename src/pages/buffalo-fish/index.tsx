@@ -4,7 +4,9 @@ import Layout from '../../components/Layout';
 
 const BuffaloFishPage: React.FC = () => (
 	<>
-		<Head />
+		<Head>
+			<body className="subpage-background" />
+		</Head>
 		<Layout>
 			<h1>BuffaLOFIsh</h1>
 		</Layout>

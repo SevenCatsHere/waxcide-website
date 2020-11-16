@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import '../../styles/index.scss';
 import styles from './index.module.scss';
 import Header from './Header';
 import Footer from './Footer';

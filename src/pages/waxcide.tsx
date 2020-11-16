@@ -10,22 +10,22 @@ interface QueryResult {
 	};
 }
 
-const CONTENT_QUERY = gql`
-	query WaxcidePage {
-		markdownRemark(frontmatter: {
-			title: { eq: "Waxcide Main Content" }
-		}) {
-			html
-		}
-	}
-`;
-
 const WaxcidePage: React.FC = () => {
-	const { html } = useStaticQuery<QueryResult>(CONTENT_QUERY).markdownRemark;
+	const { html } = useStaticQuery<QueryResult>(gql`
+		query WaxcidePage {
+			markdownRemark(frontmatter: {
+				title: { eq: "Waxcide Main Content" }
+			}) {
+				html
+			}
+		}
+	`).markdownRemark;
 
 	return (
 		<>
-			<Head />
+			<Head>
+				<body className="subpage-background" />
+			</Head>
 			<Layout>
 				<Content html={html} variant="pageContent" />
 			</Layout>

@@ -9,10 +9,14 @@ interface Props {
 }
 
 const Content: React.FC<Props> = ({ className, html, variant }) => (
-	<div
-		className={cn(variant === 'pageContent' ? styles.container : null, className)}
-		dangerouslySetInnerHTML={{ __html: html }}
-	/>
+	<section className="section">
+		<div className="content-wrapper w-container">
+			<div
+				className={cn(variant === 'pageContent' ? styles.container : null, className)}
+				dangerouslySetInnerHTML={{ __html: html }}
+			/>
+		</div>
+	</section>
 );
 
 export default Content;

@@ -10,22 +10,22 @@ interface QueryResult {
 	};
 }
 
-const CONTENT_QUERY = gql`
-	query WulfeIntro {
-		markdownRemark(frontmatter: {
-			title: { eq: "Wulfe Main Content" }
-		}) {
-			html
-		}
-	}
-`;
-
 const WulfePage: React.FC = () => {
-	const { html } = useStaticQuery<QueryResult>(CONTENT_QUERY).markdownRemark;
+	const { html } = useStaticQuery<QueryResult>(gql`
+		query WulfeIntro {
+			markdownRemark(frontmatter: {
+				title: { eq: "Wulfe Main Content" }
+			}) {
+				html
+			}
+		}
+	`).markdownRemark;
 
 	return (
 		<>
-			<Head />
+			<Head>
+				<body className="subpage-background" />
+			</Head>
 			<Layout>
 				<Content html={html} variant="pageContent" />
 			</Layout>
