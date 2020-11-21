@@ -7,6 +7,60 @@
 	background-color: rgba(0, 0, 0, .8);
 }
 
+.level-nav-heading {
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+.nav-links-wrapper {
+	@media (max-width: 767px) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		transition: transform .2s ease-in-out;
+		transform: translateX(100%);
+		background-color: rgba(0, 0, 0, .8);
+		.open & {
+			transform: none;
+		}
+
+		&.nav-links-wrapper ul {
+			flex-direction: column;
+			align-items: stretch;
+			margin-top: 3rem;
+		}
+
+		li {
+			padding-top: 1.25rem;
+			padding-bottom: 1.25rem;
+			text-align: center;
+			font-size: 1.6rem;
+			border-width: 1px 0 0 0;
+			border-style: solid;
+			border-color: rgba(255, 255, 255, .7);
+			&:last-child {
+				border-bottom-width: 1px;
+			}
+		}
+	}
+}
+
+.toggle-button {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	border: 0;
+	background: transparent;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
 .nav {
 	&,
 	ul {
