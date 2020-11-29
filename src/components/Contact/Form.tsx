@@ -1,6 +1,10 @@
 import React from 'react';
-import cn from 'classnames';
-import styles from './Form.module.scss';
+import styled from 'styled-components';
+
+const SubmitButton = styled.button`
+	font-size: 1.2rem;
+	color: #fff;
+`;
 
 const ContactForm: React.FC = () => (
 	<>
@@ -47,9 +51,9 @@ const ContactForm: React.FC = () => (
 				/>
 			</label>
 
-			<button className={cn('button', 'contact', 'w-button', styles.submitButton)} type="submit">
+			<SubmitButton className="button contact w-button" type="submit">
 				Send Message
-			</button>
+			</SubmitButton>
 		</form>
 	</>
 );

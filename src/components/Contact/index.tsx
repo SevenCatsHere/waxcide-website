@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styles from './index.module.scss';
+import styled from 'styled-components';
 import ContactForm from './Form';
 import Content from '../Content';
 
@@ -11,6 +11,53 @@ export interface ContactHoursDay {
 	from: string;
 	to: string;
 }
+
+const ContactInformation = styled(Content)`
+	display: inline-block;
+	margin-top: 5px;
+	color: #999;
+	transition: color .15s linear;
+	text-decoration: none;
+	&:hover {
+		color: #fff;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+`;
+
+const Availability = styled.dl`
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.05rem;
+
+	dt {
+		width: 40%;
+		text-align: right;
+		&::after {
+			content: ':';
+		}
+	}
+
+	dd {
+		width: 60%;
+		margin-left: 0;
+		padding-left: .6em;
+		text-align: left;
+	}
+`;
+
+interface HoursProps {
+	isClosed?: boolean;
+}
+
+const Hours = styled.dd<HoursProps>`
+	${({ isClosed }) => (isClosed ? 'font-style: italic;' : '')}
+`;
+
+const GmtNotice = styled.p`
+	font-style: italic;
+`;
 
 interface Props {
 	availability: ContactHoursDay[];
@@ -24,12 +71,12 @@ const Contact: React.FC<Props> = ({ availability, contactInfoHtml }) => (
 			<div className="contact-row w-row">
 				<div className="w-col w-col-6">
 					<h2 className="contact-h3">Contact Information</h2>
-					<Content className={styles.contactInformation} html={contactInfoHtml} />
+					<ContactInformation html={contactInfoHtml} />
 				</div>
 
 				<div className="w-col w-col-6">
 					<h2 className="contact-h3">Availability</h2>
-					<dl className={styles.availability}>
+					<Availability>
 						{availability
 							.map(day => ({
 								...day,
@@ -38,15 +85,15 @@ const Contact: React.FC<Props> = ({ availability, contactInfoHtml }) => (
 							.map(day => (
 								<Fragment key={day.id}>
 									<dt>{day.day}</dt>
-									<dd className={day.isClosed ? styles.closed : undefined}>
+									<Hours isClosed={day.isClosed}>
 										{day.isClosed ? 'Closed' : (
 											<>{day.from} &ndash; {day.to}</>
 										)}
-									</dd>
+									</Hours>
 								</Fragment>
 							))}
-					</dl>
-					<p className={styles.gmtNotice}>All times in GMT.</p>
+					</Availability>
+					<GmtNotice>All times in GMT.</GmtNotice>
 				</div>
 			</div>
 		</div>

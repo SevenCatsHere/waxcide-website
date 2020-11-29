@@ -1,20 +1,26 @@
 import React, { ReactNode } from 'react';
-import styles from './index.module.scss';
+import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
+
+const Container = styled.div`
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+`;
 
 interface Props {
 	children: ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => (
-	<div className={styles.wrapper}>
+	<Container>
 		<Header />
 		<main>
 			{children}
 		</main>
 		<Footer />
-	</div>
+	</Container>
 );
 
 export default Layout;

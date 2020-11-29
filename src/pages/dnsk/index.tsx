@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { graphql as gql, useStaticQuery } from 'gatsby';
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
@@ -22,14 +22,14 @@ const DnskPage: React.FC = () => {
 	`).markdownRemark;
 
 	return (
-		<>
+		<StrictMode>
 			<Head>
 				<body className="subpage-background" />
 			</Head>
 			<Layout>
 				<Content html={html} variant="pageContent" />
 			</Layout>
-		</>
+		</StrictMode>
 	);
 };
 

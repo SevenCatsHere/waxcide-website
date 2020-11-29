@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { graphql as gql, useStaticQuery } from 'gatsby';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
@@ -36,14 +36,14 @@ const ContactPage: React.FC = () => {
 	const contactInfoHtml = queryResult.markdownRemark.html;
 
 	return (
-		<>
+		<StrictMode>
 			<Head>
 				<body className="subpage-background" />
 			</Head>
 			<Layout>
 				<Contact availability={days} contactInfoHtml={contactInfoHtml} />
 			</Layout>
-		</>
+		</StrictMode>
 	);
 };
 

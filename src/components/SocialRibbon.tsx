@@ -1,19 +1,29 @@
 import React from 'react';
-import cn from 'classnames';
+import styled from 'styled-components';
 import {
 	FaFacebook,
 	FaTwitter,
 	FaInstagram,
 	FaYoutube,
 } from 'react-icons/fa';
-import styles from './SocialRibbon.module.scss';
 
-interface Props {
-	className: string;
-}
+const Nav = styled.nav`
+	width: 100vw;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-color: rgba(5, 5, 5, .6);
 
-const SocialRibbon: React.FC<Props> = ({ className }) => (
-	<nav className={cn(styles.socialRibbon, className)}>
+	ul {
+		display: flex;
+		justify-content: space-around;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+`;
+
+const SocialRibbon: React.FC = () => (
+	<Nav>
 		<ul>
 			<li>
 				<a
@@ -56,7 +66,7 @@ const SocialRibbon: React.FC<Props> = ({ className }) => (
 				</a>
 			</li>
 		</ul>
-	</nav>
+	</Nav>
 );
 
 export default SocialRibbon;
